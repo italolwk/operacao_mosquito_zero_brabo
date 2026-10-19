@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cjj28uxjq2wl2"]
+
+[ext_resource type="Script" uid="uid://didv30firkrt2" path="res://jogador.gd" id="1_yuxfx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_713nv"]
+size = Vector2(50, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q2c3q"]
+size = Vector2(120, 100)
+
+[node name="Jogador" type="CharacterBody2D" unique_id=1401653884 groups=["jogador"]]
+script = ExtResource("1_yuxfx")
+
+[node name="Corpo" type="ColorRect" parent="." unique_id=974252831]
+offset_left = -25.0
+offset_top = -35.0
+offset_right = 25.0
+offset_bottom = 35.0
+color = Color(0.14509805, 0.3882353, 0.92156863, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=826458957 groups=["jogador"]]
+shape = SubResource("RectangleShape2D_713nv")
+
+[node name="Ataque" type="Area2D" parent="." unique_id=1253272230]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ataque" unique_id=994323071]
+shape = SubResource("RectangleShape2D_q2c3q")

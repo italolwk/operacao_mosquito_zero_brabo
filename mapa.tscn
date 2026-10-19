@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://c6eh77k60wxx6"]
+
+[ext_resource type="PackedScene" uid="uid://cjj28uxjq2wl2" path="res://jogador.tscn" id="1_2jh14"]
+[ext_resource type="Script" uid="uid://bwq5caodd5oyh" path="res://mapa.gd" id="1_q8ihy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q2c3q"]
+size = Vector2(64, 173.25769)
+
+[node name="Mapa" type="Control" unique_id=656646526]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q8ihy")
+
+[node name="Background" type="ColorRect" parent="." unique_id=2014522158]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.47058824, 0.72156864, 0.3529412, 1)
+
+[node name="Rua" type="ColorRect" parent="." unique_id=507182662]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 249.0
+offset_right = 1153.0
+offset_bottom = 399.0
+color = Color(0.2901961, 0.2901961, 0.2901961, 1)
+
+[node name="CalcadaSuperior" type="ColorRect" parent="." unique_id=58730063]
+layout_mode = 0
+offset_top = 225.0
+offset_right = 1152.0
+offset_bottom = 250.0
+color = Color(0.7411765, 0.7411765, 0.7411765, 1)
+
+[node name="CalcadaInferior" type="ColorRect" parent="." unique_id=743629510]
+layout_mode = 0
+offset_top = 400.0
+offset_right = 1152.0
+offset_bottom = 425.0
+color = Color(0.7411765, 0.7411765, 0.7411765, 1)
+
+[node name="Residencia" type="ColorRect" parent="." unique_id=1784925843]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 30.0
+offset_right = 380.0
+offset_bottom = 210.0
+color = Color(0.9098039, 0.7647059, 0.61960787, 1)
+
+[node name="Telhado" type="ColorRect" parent="Residencia" unique_id=1140670921]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 301.0
+offset_bottom = 46.0
+color = Color(0.54509807, 0.27058825, 0.07450981, 1)
+
+[node name="Porta" type="ColorRect" parent="Residencia" unique_id=1350335981]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 180.0
+offset_bottom = 180.0
+color = Color(0.3529412, 0.21960784, 0.14509805, 1)
+
+[node name="Janela1" type="ColorRect" parent="Residencia" unique_id=866037120]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 50.0
+offset_right = 90.0
+offset_bottom = 105.0
+color = Color(0.2901961, 0.5647059, 0.6431373, 1)
+
+[node name="Janela2" type="ColorRect" parent="Residencia" unique_id=950219740]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 50.0
+offset_right = 280.0
+offset_bottom = 105.0
+color = Color(0.2901961, 0.5647059, 0.6431373, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Residencia" unique_id=1674636764]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Residencia/StaticBody2D" unique_id=479745350]
+position = Vector2(55, 93.5)
+shape = SubResource("RectangleShape2D_q2c3q")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Residencia/StaticBody2D" unique_id=1030310031]
+position = Vector2(240, 90)
+shape = SubResource("RectangleShape2D_q2c3q")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Residencia/StaticBody2D" unique_id=896933062]
+position = Vector2(136.99998, 31)
+rotation = -1.5727711
+scale = Vector2(0.8736798, 1.3009773)
+shape = SubResource("RectangleShape2D_q2c3q")
+
+[node name="Terreno" type="ColorRect" parent="." unique_id=691740175]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 40.0
+offset_right = 1050.0
+offset_bottom = 220.0
+color = Color(0.30980393, 0.49803922, 0.22745098, 1)
+
+[node name="Pneu" type="ColorRect" parent="Terreno" unique_id=1766560198]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 130.0
+offset_bottom = 130.0
+color = Color(0.14509805, 0.14509805, 0.14509805, 1)
+
+[node name="Agua" type="ColorRect" parent="Terreno/Pneu" unique_id=277131648]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 55.0
+offset_bottom = 55.0
+color = Color(0.23137255, 0.50980395, 0.627451, 1)
+
+[node name="Balde" type="ColorRect" parent="Terreno" unique_id=1487654727]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 80.0
+offset_right = 260.0
+offset_bottom = 140.0
+color = Color(0.41960785, 0.2901961, 0.16862746, 1)
+
+[node name="AguaBalde" type="ColorRect" parent="Terreno/Balde" unique_id=979734802]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 25.0
+color = Color(0.23137255, 0.50980395, 0.627451, 1)
+
+[node name="Control" type="Control" parent="." unique_id=1797081939]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Jogador" parent="." unique_id=1401653884 instance=ExtResource("1_2jh14")]
+position = Vector2(228, 325)
+
+[node name="VidaLabel" type="Label" parent="." unique_id=1728024618]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Vidas: 3"
+
+[node name="MosquitosLabel" type="Label" parent="." unique_id=925050723]
+custom_minimum_size = Vector2(20, 50)
+layout_mode = 0
+offset_top = 28.0
+offset_right = 99.0
+offset_bottom = 78.0
+text = "Mosquitos: 0"
+
+[node name="MissaoLabel" type="Label" parent="." unique_id=1240237895]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 4.0
+offset_right = 630.0
+offset_bottom = 27.0
+text = "Objetivo: Elimine 5 mosquitos"
+
+[node name="MissaoConcluidaLabel" type="Label" parent="." unique_id=1983846657]
+visible = false
+layout_mode = 0
+offset_left = 400.0
+offset_top = 250.0
+offset_right = 700.0
+offset_bottom = 300.0
+text = "MISSÃO CONCLUÍDA!"
+
+[node name="OndaLabel" type="Label" parent="." unique_id=1305585751]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 20.0
+offset_right = 1060.0
+offset_bottom = 43.0
+text = "Onda: 1"
+
+[node name="OndaMensagemLabel" type="Label" parent="." unique_id=1628021076]
+visible = false
+layout_mode = 0
+offset_left = 426.0
+offset_top = 280.0
+offset_right = 726.0
+offset_bottom = 340.0
+text = "PRÓXIMA ONDA!"

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bwudofix7ot3r"]
+
+[ext_resource type="Script" uid="uid://dnpm2ik1dclhi" path="res://mosquito.gd" id="1_dnsox"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_713nv"]
+size = Vector2(45, 25)
+
+[node name="Mosquito" type="Area2D" unique_id=1645272377 groups=["mosquito"]]
+z_index = 1
+position = Vector2(-1, 0)
+script = ExtResource("1_dnsox")
+
+[node name="corpo" type="ColorRect" parent="." unique_id=720566465]
+offset_right = 65.0
+offset_bottom = 35.0
+color = Color(0.011764706, 0.011764706, 0.011764706, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=206340480]
+shape = SubResource("RectangleShape2D_713nv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

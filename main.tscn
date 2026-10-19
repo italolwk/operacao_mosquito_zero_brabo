@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://bovt7up8bc3ym"]
+
+[node name="Main" type="Control" unique_id=174194297]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -441.0
+offset_top = 193.0
+offset_right = -441.0
+offset_bottom = 193.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_horizontal_guides_ = [101.0]
+
+[node name="background" type="ColorRect" parent="." unique_id=1080351245]
+layout_mode = 0
+offset_left = -42.0
+offset_top = 8.0
+offset_right = 1110.0
+offset_bottom = 656.0
+color = Color(0.043137256, 0.23921569, 0.18039216, 1)
+
+[node name="Titulo" type="Label" parent="." unique_id=1424450152]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 50.0
+offset_right = 852.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 36
+text = "OPERAÇÃO MOSQUITO ZERO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Botaojogar" type="Button" parent="." unique_id=1636547104]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 250.0
+offset_right = 701.0
+offset_bottom = 310.0
+theme_override_font_sizes/font_size = 22
+text = "JOGAR"
+
+[node name="subtitulo" type="Label" parent="." unique_id=972254166]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 120.0
+offset_right = 876.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 18
+text = "Comabata o mosquito. proteja sua comunidade."
+horizontal_alignment = 1
+
+[node name="BotaoInformacoes" type="Button" parent="." unique_id=140669902]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 330.0
+offset_right = 701.0
+offset_bottom = 390.0
+theme_override_font_sizes/font_size = 22
+text = "INFORMAÇÕES"
+
+[node name="BotaoConquistas" type="Button" parent="." unique_id=1725350178]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 410.0
+offset_right = 701.0
+offset_bottom = 470.0
+theme_override_font_sizes/font_size = 22
+text = "CONQUISTAS"
+
+[node name="BotaoSair" type="Button" parent="." unique_id=1321432741]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 490.0
+offset_right = 701.0
+offset_bottom = 550.0
+theme_override_font_sizes/font_size = 22
+text = "SAIR"
